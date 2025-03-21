@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/res.css">
+    <link rel="stylesheet" href="">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form action="" class="form" method="post" id="form-1">
+        <h1 class="title">Chào mừng đến với thế giới của tớ ❤️</h1>
+        <p class="description">Cùng nhau học HTML CSS nhé</p>
+        <div class="form-elememt">
+            <label for="name" class="form-label">Nhập họ tên</label>
+            <input placeholder="Ví dụ: Nguyễn Đăng Nam" type="text" name="name" id="name" class="form-input">
+            <span class="form-valid" id="warning"></span>
+        </div>
+        <div class="form-elememt">
+            <label for="email" class="form-label">Nhập email</label>
+            <input type="email" name="email" id="email" class="form-input" placeholder="VD: example@gmail.com">
+            <span class="form-valid"></span>
+        </div>
+        <div class="form-elememt">
+            <label for="password" class="form-label"> Nhập mật khẩu</label>
+            <input type="password" name="password" id="password" class="form-input" placeholder="Nhập mật khẩu">
+            <span class="form-valid"></span>
+        </div>
+        <div class="form-elememt">
+            <label for="confirm-password" class="form-label">Nhập lại mật khẩu</label>
+            <input type="password" name="confirm-password" id="confirm-password" class="form-input" placeholder="Nhập lại mật khẩu">
+            <span class="form-valid"></span>
+        </div>
+        <div class="select">
+            <legend class="form-label">Bạn là nam hay nữ</legend>
+            <label for="male" class="form-label"><input type="radio" name="gender" class="gender" value="male"> Nam</label>
+            <label for="female" class="form-label"><input type="radio" name="gender" class="gender" value="female"> Nữ</label>
+            <span class="form-valid"></span>
+        </div>
+        <div class="policy">
+            <input type="checkbox" id="policy" name="policy"><span> Tôi đồng ý với các <a href="https://www.facebook.com/pham.huyen.279543?locale=vi_VN">điều khoản</a> và chính sách của chương trình</span>
+        </div>
+        <button class="button">Submit</button>
+    </form>
+    <script src="Validator.js">
+       
+    </script> -->
+    <!-- <script>
+         Validator({
+            form: '.form',
+            ErrorElement: '.form-valid',
+            rules: [
+                Validator.isRequired('#name', "Vui lòng nhập tên"),
+                Validator.isRequired('#email', "Vui lòng nhập email"),
+                Validator.isEmail("#email", "Email không đúng định dang"),
+                Validator.isRequired('#password', "Vui lòng nhập mật khẩu"),
+                Validator.isPassword("#password", "Mật khẩu phải lớn hơn 8 kí tự"),
+                Validator.isRequired("#confirm-password", "Vui lòng nhập lại mật khẩu"),
+                Validator.isRequired('input[type="radio"]', "Vui lòng chọn giới tính")
+                // Validator.isConfirm("#confirm-password", function(){
+                //     return document.querySelector('.form #password').value
+                // }, "2 mật khẩu phải giống nhau nah")
+
+            ]
+        });
+    </script> -->
+    <!-- <button onclick=openTab()>Hello world</button>
+    <button onclick=close()>Hello</button>
+    <button onclick=reloadPage()>Reload</button>
+    <script src = 'BOM.js'>
+
+    </script> -->
+   <ul class="list">
+
+    
+   </ul>
+    <!-- <script>
+        let list = document.querySelector('.list')
+        let menulist = list.querySelectorAll('button')
+        console.log(menulist)
+        for(let button of menulist){
+            button.addEventListener('click', (event) => {
+                console.log(event.target.parentNode)
+                list.removeChild(event.target.parentNode)
+
+            })
+        }
+        
+    </script> -->
+    <script>
+        // let promise = new Promise((resolve, reject) => { 
+        //     setTimeout(resolve, 3000) 
+        // })
+        // console.log(promise)
+        fetch('https://dummyjson.com/products')
+        .then((value) => {
+            return value.json()
+        })
+        .then((data) => {
+            return data.products.map((value) => `<div>
+                    <img class="image" src=${value.thumbnail}>
+                    ${value.title}
+                </div>`)
+        }).then((arr) => {
+            let htmls = arr.join("")
+            let list = document.querySelector('.list')
+            list.innerHTML = htmls
+
+        })
+    </script>
+</body>
+</html>
