@@ -11,3 +11,8 @@
     font-size: 33px;
     text-align: center;
 }
+.form-valid{
+    color: red;
+    text-align: center;
+    font-size: 22px;
+}
