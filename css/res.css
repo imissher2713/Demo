@@ -1,0 +1,8 @@
+.red{
+    border-color: red;
+}
+.form-valid{
+    color: red;
+    font-size: 12px;
+    text-align: left;
+}

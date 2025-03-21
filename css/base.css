@@ -1,0 +1,44 @@
+:root{
+    --p-color: #103178;
+    --y-color: #FFC800;
+    --text-color: #686D77;
+    --header-height: 120px;
+    --y2-color: #FFC800;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+li{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;    /* Căn giữa */
+
+}
+body{
+    margin: 0;
+}
+/* @keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    in{
+        opacity: 1;
+    }
+    
+} */
+ 
